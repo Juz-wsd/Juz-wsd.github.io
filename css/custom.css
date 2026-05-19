@@ -29,18 +29,71 @@ body {
   font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 }
 
-/* ===== 顶栏导航 ===== */
+/* ===== 全屏首屏 ===== */
+#page-header {
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+/* 无背景图时的默认渐变 */
+#page-header.no-top-img,
+#body-wrap > #page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background-attachment: fixed !important;
+}
+
+#site-info {
+  text-align: center;
+}
+
+#site-title {
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+#site-subtitle {
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  font-weight: 300;
+}
+
+/* 向下滚动箭头 */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.scroll-down i {
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* 导航栏透明 + 悬停变白 */
 #page-header #nav {
-  padding: 0 20px;
+  background: transparent;
+  transition: background 0.3s ease;
 }
 
 #page-header #nav a {
-  color: var(--font-color);
-  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 #page-header #nav a:hover {
-  color: var(--btn-bg);
+  color: #fff;
 }
 
 /* ===== 文章卡片 ===== */

@@ -97,11 +97,6 @@ body {
 .avatar-img img {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.avatar-img img:hover {
-  transform: rotate(360deg);
 }
 
 /* ===== 链接色 ===== */
